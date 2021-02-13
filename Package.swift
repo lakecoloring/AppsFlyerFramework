@@ -9,12 +9,18 @@ let package = Package(
         .library(
             name: "AppsFlyerLib",
             targets: ["AppsFlyerLib"]),
+        .library(
+            name: "AppsFlyerLib-Strict",
+            targets: ["AppsFlyerLib"]),
     ],
     dependencies: [
     ],
     targets: [
         .binaryTarget(
             name: "AppsFlyerLib",
-            path: "MacCatalyst/AppsFlyerLib.xcframework")
+            path: "MacCatalyst/AppsFlyerLib.xcframework"),
+        .binaryTarget(
+            name: "AppsFlyerLib-Strict",
+            path: "iOS-Strict/AppsFlyerLib.xcframework")
     ]
 )
