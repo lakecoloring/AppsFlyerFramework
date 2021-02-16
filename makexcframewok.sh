@@ -59,6 +59,10 @@ rm "$THINNED_FRAMEWORK_EXECUTABLE_PATH"
 mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$THINNED_FRAMEWORK_EXECUTABLE_PATH"
 THINED_FRAMEWORKS+=("$FRAMEWORK_COPY")
 done
+
+[ -d "$PWD/$2" ] && rm -rf "$PWD/$2"
+
+
 printInfo "Creating xcframework from: ${THINED_FRAMEWORKS}"
 xcodebuild -create-xcframework -framework "${THINED_FRAMEWORKS[0]}" -framework "${THINED_FRAMEWORKS[1]}" -output "$PWD/$2"
 
