@@ -1,5 +1,6 @@
 #!/bin/bash
-
+## usage:
+## sh makexcframewok.sh iOS-Strict/AppsFlyerLib.framework iOS-Strict/AppsFlyerLib.xcframework
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
@@ -29,7 +30,7 @@ ARCHS=${ARCHS_TOEXTRACT[$i]}
 SUB_DIR="${FRAMEWORK%/*}/${SUB_DIRS[$i]}"
 FRAMEWORK_COPY="$SUB_DIR/$FRAMEWORK_FILENAME"
 
-printInfoColorIndex "Create temp thinned framework" $i
+printInfoColorIndex "Create temp thinned framework $i"
 [ -d "$SUB_DIR" ] && rm -rf "$SUB_DIR"
 mkdir "$SUB_DIR"
 
