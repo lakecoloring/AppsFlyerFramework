@@ -11,7 +11,7 @@ let package = Package(
             targets: ["AppsFlyerLib"]),
         .library(
             name: "AppsFlyerLib-Strict",
-            targets: ["AppsFlyerLib"]),
+            targets: ["AppsFlyerLib-Strict"]),
     ],
     dependencies: [
     ],
