@@ -6,11 +6,11 @@ import PackageDescription
 let package = Package(
     name: "AppsFlyerLib",
     products: [
-        .library(name: "AppsFlyerLib", targets: ["AppsFlyerLib"]),
+        .library(name: "AppsFlyerLib", targets: ["AppsFlyerLib-Strict"]),
     ],
     dependencies: [
     ],
     targets: [
-        .binaryTarget(name: "AppsFlyerLib", path: "AppsFlyerLib.xcframework"),
+        .binaryTarget(name: "AppsFlyerLib-Strict", path: "Strict/AppsFlyerLib.xcframework"),
     ]
 )
